@@ -1,7 +1,9 @@
-FROM node:16-alpine AS login_backend
+FROM node:16-alpine AS login_api
 
 WORKDIR /app
 
 COPY . .
+
+RUN npm install
 
 EXPOSE 3001
